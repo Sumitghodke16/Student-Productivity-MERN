@@ -1,11 +1,12 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL:
+    import.meta.env.VITE_API_URL ||
+    "https://student-productivity-mern.onrender.com/api",
 });
 
 // ADD TOKEN AUTOMATICALLY
-
 API.interceptors.request.use(
   (config) => {
 
@@ -21,7 +22,6 @@ API.interceptors.request.use(
     }
 
     return config;
-
   },
 
   (error) => {
