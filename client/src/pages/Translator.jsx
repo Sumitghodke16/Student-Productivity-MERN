@@ -113,7 +113,7 @@ function Translator() {
         const response =
           await axios.post(
 
-            "https://student-productivity-mern.onrender.com",
+            "https://student-productivity-mern.onrender.com/translate",
 
             {
 
