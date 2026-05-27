@@ -1,0 +1,205 @@
+```css id="lm2k7z"
+.dashboard-layout {
+
+  display: flex;
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      to right,
+      #020617,
+      #00113a
+    );
+
+  overflow-x: hidden;
+
+}
+
+/* SIDEBAR */
+
+.sidebar {
+
+  width: 260px;
+
+  min-height: 100vh;
+
+  background: #020617;
+
+  border-right:
+    1px solid rgba(255,255,255,0.06);
+
+  padding: 24px 18px;
+
+  box-sizing: border-box;
+
+  position: sticky;
+
+  top: 0;
+
+  overflow-y: auto;
+
+}
+
+/* SIDEBAR SCROLLBAR */
+
+.sidebar::-webkit-scrollbar {
+
+  width: 5px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+
+  background: #2563eb;
+
+  border-radius: 10px;
+
+}
+
+/* LOGO */
+
+.logo {
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  margin-bottom: 40px;
+
+  color: #3b82f6;
+
+  line-height: 1;
+
+}
+
+/* MENU */
+
+.sidebar-menu {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+}
+
+/* LINKS */
+
+.sidebar-menu a {
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  padding: 14px 18px;
+
+  border-radius: 16px;
+
+  transition: 0.3s;
+
+}
+
+/* HOVER */
+
+.sidebar-menu a:hover {
+
+  background:
+    rgba(59,130,246,0.15);
+
+}
+
+/* ACTIVE */
+
+.active-link {
+
+  background:
+    linear-gradient(
+      to right,
+      #2563eb,
+      #60a5fa
+    );
+
+  box-shadow:
+    0 0 18px rgba(59,130,246,0.35);
+
+}
+
+/* MAIN AREA */
+
+.dashboard-main {
+
+  flex: 1;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 900px) {
+
+  .dashboard-layout {
+
+    flex-direction: column;
+
+  }
+
+  .sidebar {
+
+    width: 100%;
+
+    min-height: auto;
+
+    position: relative;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(255,255,255,0.06);
+
+  }
+
+  .logo {
+
+    text-align: center;
+
+    font-size: 30px;
+
+  }
+
+  .sidebar-menu {
+
+    flex-direction: row;
+
+    overflow-x: auto;
+
+    padding-bottom: 8px;
+
+  }
+
+  .sidebar-menu a {
+
+    white-space: nowrap;
+
+    font-size: 15px;
+
+    padding: 12px 16px;
+
+  }
+
+  .dashboard-main {
+
+    padding: 20px;
+
+  }
+
+}
+```
