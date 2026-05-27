@@ -49,7 +49,7 @@ const Settings = () => {
         const response =
           await axios.post(
 
-            "https://student-productivity-mern.onrender.com",
+            "https://student-productivity-mern.onrender.com/api/auth/login",
 
             {
 
@@ -110,7 +110,7 @@ const Settings = () => {
 
         await axios.post(
 
-          "https://student-productivity-mern.onrender.com",
+          "https://student-productivity-mern.onrender.com/api/auth/register",
 
           formData
 
@@ -222,6 +222,7 @@ const Settings = () => {
             <div className="auth-toggle">
 
               <button
+                type="button"
                 className={
                   isLogin
                     ? "toggle-btn active-btn"
@@ -235,6 +236,7 @@ const Settings = () => {
               </button>
 
               <button
+                type="button"
                 className={
                   !isLogin
                     ? "toggle-btn active-btn"
@@ -268,7 +270,9 @@ const Settings = () => {
                   type="text"
                   name="name"
                   placeholder="Enter Name"
+                  value={formData.name}
                   onChange={handleChange}
+                  required
                 />
 
               )}
@@ -279,7 +283,9 @@ const Settings = () => {
                 type="email"
                 name="email"
                 placeholder="Enter Email"
+                value={formData.email}
                 onChange={handleChange}
+                required
               />
 
               {/* PASSWORD */}
@@ -288,7 +294,9 @@ const Settings = () => {
                 type="password"
                 name="password"
                 placeholder="Enter Password"
+                value={formData.password}
                 onChange={handleChange}
+                required
               />
 
               {/* PASSWORD NOTE */}
