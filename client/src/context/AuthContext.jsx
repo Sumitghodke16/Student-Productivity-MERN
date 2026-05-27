@@ -29,7 +29,7 @@ const Settings = () => {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://student-productivity-mern.onrender.com",
         {
           email: formData.email,
           password: formData.password,
@@ -68,7 +68,7 @@ const Settings = () => {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://student-productivity-mern.onrender.com",
         formData
       );
 
